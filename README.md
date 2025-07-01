@@ -1,2 +1,1 @@
-
-# WanderLuST
+# WanderLust
