@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal-page";
+import { sitePath } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Terms",
   description: "Terms of use for SettleSmart.",
-  alternates: { canonical: "/terms" },
+  alternates: { canonical: sitePath("/terms") },
 };
 
 export default function TermsPage() {

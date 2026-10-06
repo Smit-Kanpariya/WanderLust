@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal-page";
+import { sitePath } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy",
   description: "How SettleSmart handles your data: calculations stay in your browser.",
-  alternates: { canonical: "/privacy" },
+  alternates: { canonical: sitePath("/privacy") },
 };
 
 export default function PrivacyPage() {

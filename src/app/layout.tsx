@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
-import { getSiteUrl, SITE } from "@/lib/site";
+import { getSiteUrl, SITE, sitePath } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   title: { default: SITE.title, template: "%s · SettleSmart" },
   description: SITE.description,
   applicationName: SITE.name,
-  alternates: { canonical: "/" },
+  alternates: { canonical: sitePath("/") },
   openGraph: {
     type: "website",
     siteName: SITE.name,
     title: SITE.title,
     description: SITE.description,
-    url: "/",
+    url: sitePath("/"),
   },
   twitter: { card: "summary_large_image", title: SITE.title, description: SITE.description },
 };
